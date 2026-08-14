@@ -1,5 +1,7 @@
 # Day 2: Basic file integrity checker (SHA-256)
 
+[![CI](https://github.com/ZombieDuckling/cyber-day2-file-integrity-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/ZombieDuckling/cyber-day2-file-integrity-checker/actions/workflows/ci.yml)
+
 This mini project builds a beginner-friendly file integrity checker in Python.
 It creates a SHA-256 baseline hash for a file, then verifies whether the file
 has changed.
@@ -65,6 +67,17 @@ Expected behavior:
 
 - Unchanged file: integrity check passes.
 - Changed file: integrity check fails with an alert and exit code `1`.
+
+## Tests
+
+Run the characterization suite before changing the checker logic:
+
+```bash
+python3 -m pip install pytest
+python3 -m pytest -q
+```
+
+GitHub Actions runs the same pytest suite on Python 3.10 and 3.12 for pull requests and pushes to `main`.
 
 ## Legal and ethical use
 
